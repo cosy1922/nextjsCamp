@@ -4,8 +4,6 @@ import axios from 'axios';
 import React, { CSSProperties, useEffect, useState } from 'react';
 import '../app/globals.css';
 import css from 'styled-jsx/css';
-import 'react-app-polyfill/ie11';
-import 'react-app-polyfill/stable';
 import { GetServerSideProps } from 'next';
 
 interface IndexProps {
