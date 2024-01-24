@@ -1,6 +1,6 @@
-import axios from "axios";
-import React from "react";
-import css from "styled-jsx/css";
+import axios from 'axios';
+import React from 'react';
+import css from 'styled-jsx/css';
 
 type BtnParams = {
   date: string;
@@ -18,17 +18,17 @@ export const MobilePush = (props: BtnParams) => {
   `;
 
   const testok = () => {
-    const enteredPassword = prompt("Enter your password:");
+    const enteredPassword = prompt('Enter your password:');
     console.log(enteredPassword);
 
-    if (enteredPassword == "123") {
+    if (enteredPassword == '123') {
       axios
-        .get("http://localhost:4000/daejeo/pushMobile?date=" + props.date)
+        .get('http://localhost:4000/daejeo/pushMobile?date=' + props.date)
         .then((e) => {
           console.log(e);
         });
     } else {
-      alert("패스워드가 다릅니다.");
+      alert('패스워드가 다릅니다.');
     }
   };
 
@@ -36,9 +36,9 @@ export const MobilePush = (props: BtnParams) => {
     <div
       className="btnCss"
       style={{
-        textAlign: "center",
-        marginTop: "2px",
-        boxShadow: "10px 10px 20px black;",
+        textAlign: 'center',
+        marginTop: '2px',
+        boxShadow: '10px 10px 20px black;'
       }}
     >
       <button onClick={testok}>알람 PUSH</button>

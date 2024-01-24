@@ -1,8 +1,8 @@
-import React, { CSSProperties } from "react";
+import React, { CSSProperties } from 'react';
 
 const navCss: CSSProperties = {
-  background: "black",
-  color: "white",
+  background: 'black',
+  color: 'white'
 };
 
 export const Header = () => {

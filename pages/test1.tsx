@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 export const test1 = () => {
   return <div>nextjs test1 page</div>;
 };

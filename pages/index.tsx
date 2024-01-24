@@ -1,13 +1,13 @@
-import Header from "@/components/Header";
-import MobilePush from "@/components/MobilePush";
-import axios from "axios";
-import React, { CSSProperties, useEffect, useState } from "react";
-import "../app/globals.css";
-import css from "styled-jsx/css";
+import Header from '@/components/Header';
+import MobilePush from '@/components/MobilePush';
+import axios from 'axios';
+import React, { CSSProperties, useEffect, useState } from 'react';
+import '../app/globals.css';
+import css from 'styled-jsx/css';
 
 export const Test1 = () => {
   useEffect(() => {
-    axios.get("http://localhost:4000/daejeo/dateView").then((e) => {
+    axios.get('http://localhost:4000/daejeo/dateView').then((e) => {
       setData(e.data);
       console.log(e);
     });
@@ -16,13 +16,13 @@ export const Test1 = () => {
   const [getData, setData] = useState<any>();
 
   const tableCss: CSSProperties = {
-    width: "100%",
-    height: "100%",
-    textAlign: "center",
+    width: '100%',
+    height: '100%',
+    textAlign: 'center'
   };
 
   const seatCss: CSSProperties = {
-    background: "lightgreen",
+    background: 'lightgreen'
   };
 
   const styles = css`
@@ -72,8 +72,8 @@ export const Test1 = () => {
                             background:
                               getData?.[getData?.header[idx - 2]].data
                                 .null_seat == 0
-                                ? "lightcoral"
-                                : "lightgreen",
+                                ? 'lightcoral'
+                                : 'lightgreen'
                           }}
                         >
                           가능한 자리 :
@@ -97,8 +97,8 @@ export const Test1 = () => {
                             background:
                               getData?.[getData?.header[idx - 1]].data
                                 .null_seat == 0
-                                ? "lightcoral"
-                                : "lightgreen",
+                                ? 'lightcoral'
+                                : 'lightgreen'
                           }}
                         >
                           가능한 자리 :
@@ -122,8 +122,8 @@ export const Test1 = () => {
                             background:
                               getData?.[getData?.header[idx]].data.null_seat ==
                               0
-                                ? "lightcoral"
-                                : "lightgreen",
+                                ? 'lightcoral'
+                                : 'lightgreen'
                           }}
                         >
                           가능한 자리 :
