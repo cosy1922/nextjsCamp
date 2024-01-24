@@ -4,17 +4,27 @@ import axios from 'axios';
 import React, { CSSProperties, useEffect, useState } from 'react';
 import '../app/globals.css';
 import css from 'styled-jsx/css';
+import 'react-app-polyfill/ie11';
+import 'react-app-polyfill/stable';
+import { GetServerSideProps } from 'next';
 
-export const Test1 = () => {
-  useEffect(() => {
-    axios.get('http://localhost:4000/daejeo/dateView').then((e) => {
-      setData(e.data);
-      console.log(e);
+interface IndexProps {
+  data: string;
+}
+export const getServerSideProps: GetServerSideProps<IndexProps> = async () => {
+  const result = await axios
+    .get('http://localhost:4000/daejeo/dateView')
+    .then((e) => {
+      return {
+        props: { data: e.data }
+      };
     });
-  }, []);
 
-  const [getData, setData] = useState<any>();
+  return result;
+};
 
+export const Test1: React.FC<IndexProps> = (props) => {
+  const getData: any = props.data;
   const tableCss: CSSProperties = {
     width: '100%',
     height: '100%',
