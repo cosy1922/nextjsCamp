@@ -37,7 +37,7 @@ export const RainComponent: React.FC = () => {
         overflow: 'hidden',
         background: 'rgba(17, 34, 51, 0)',
         // background: 'linear-gradient(#123, #111)',
-        zIndex: '2'
+        zIndex: '3'
       }}
     >
       {makeSnowFlakes()}
