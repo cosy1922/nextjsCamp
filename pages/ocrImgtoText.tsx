@@ -68,7 +68,7 @@ export const ocrImgtoText: React.FC = () => {
       <Alert key={'danger'} variant={'danger'}>
         안녕
       </Alert>;
-      alert('실패했따');
+      alert('실패했따' + data.error);
       // console.error('Error:', data.error);
     }
   };
